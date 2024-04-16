@@ -9,9 +9,7 @@ private:
     vector<Predicate> bodyPredicates;
 
 public:
-    Rule(){
-        // nothingggg
-    }
+    Rule(){}
 
     Rule(Predicate newHead) {
         headPredicate = newHead;
