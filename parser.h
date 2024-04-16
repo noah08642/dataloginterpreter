@@ -24,7 +24,6 @@ public:
 
     void throwError() {
         throw tokens.at(0);
-
     }
 
     void match(TokenType t) {
@@ -49,6 +48,7 @@ public:
         }
     }
 
+# parses the structure of the datalog input.  Creates the vectors of schemes, facts, rules, and queries.  Stores the vectors as a datalogprogram object.
     Datalogprogram datalogProgram() {
         match(SCHEMES);
         match(COLON);
