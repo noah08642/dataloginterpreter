@@ -18,13 +18,13 @@ private:
 public:
     Scanner(const string& input) : input(input) { }
 
+
+# scans the next token, identifying its type, value, and line number, then deletes the token from the input
     Token scanToken() {
         TokenType type;
 
         line = line + extraLines;
         extraLines = 0;
-
-
 
 
         if (!input.empty()) {
@@ -164,7 +164,6 @@ public:
     vector<Token> scanAllTokens() {
         while(!input.empty()) {
             Token t = scanToken();
-            //cout << t.toString() << endl;
             if (t.getType() == COMMENT) {
                 // don't do anything
             }
