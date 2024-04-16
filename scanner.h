@@ -24,7 +24,6 @@ public:
         line = line + extraLines;
         extraLines = 0;
 
-//        cout << "input at 6 is: " << input.at(6) << endl;
 
 
 
