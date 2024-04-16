@@ -14,15 +14,11 @@ private:
 
 public:
 
-//    Database(map<string, Relation> relations) : relations(relations) {}
 
     void AddRelation(Relation newRelation) {
         relations[newRelation.returnName()] = newRelation;
     }
 
-//    Relation* GetRelation(string name) {
-//        return &relations.at(name);
-//    }
 
     Relation GetRelationCopy(string name) {
         return relations.at(name);
@@ -39,10 +35,6 @@ public:
         }
         return i;
     }
-
-//    for (const auto& pair : myMap) {
-//        std::cout << "Key: " << pair.first << ", Value: " << pair.second << std::endl;
-//    }
 
 
 
