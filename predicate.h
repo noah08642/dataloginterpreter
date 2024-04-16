@@ -64,10 +64,6 @@ public:
 
 
 
-//
-// Created by richaluk on 2/9/24.
-//
-
 #ifndef RICHALUK_PREDICATE_H
 #define RICHALUK_PREDICATE_H
 
