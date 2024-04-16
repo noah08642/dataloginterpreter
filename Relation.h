@@ -155,7 +155,6 @@ public:
             out << tuple.toString(scheme);
             out << "\n";
         }
-        // add code to print the Tuples, one per line
         return out.str();
     }
 
@@ -167,8 +166,6 @@ public:
                 result.addTuple(tuple);
             }
         }
-
-        // add tuples to the result if they meet the condition
         return result;
     }
 
