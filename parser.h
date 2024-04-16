@@ -184,13 +184,6 @@ public:
         return newFact;
     }
 
-//    Parameter firstP = parameter();
-//    match(STRING);
-//
-//    vector<Parameter> otherPs = stringList();
-//    otherPs.insert(otherPs.begin(), firstP);
-//    newFact.setParameters(otherPs);
-
     Rule rule() {
         Rule newRule;
         Predicate newHead = headPredicate();
@@ -321,13 +314,10 @@ public:
     }
 
     Parameter parameter() {
-//        cout << tokens.at(0).getValue() << tokens.at(0).getType() << endl;
-
         Parameter newParameter;
         string newString = tokens.at(0).getValue();
         newParameter.setParameter(newString);
         if(tokenType() == STRING) {
-//            domain.push_back(newParameter.getParameter());
             match(STRING);
         }
         else if(tokenType() == ID)  {
