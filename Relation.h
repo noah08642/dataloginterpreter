@@ -22,7 +22,7 @@ public:
     }
 
 
-
+# natural join operation
     Relation join(const Relation& right) {
         const Relation& left = *this;
         Relation result;
