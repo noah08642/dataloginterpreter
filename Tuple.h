@@ -53,9 +53,6 @@ public:
     vector<string> getValues() {
         return values;
     }
-
-    // TODO: add more delegation functions as needed
-
 };
 
 #endif //RICHALUK_TUPLE_H
