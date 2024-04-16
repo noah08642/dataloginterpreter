@@ -86,21 +86,11 @@ public:
         SCCString(SCC);
         cout << endl;
 
-
-        // pseudo code
-        // if
-
-
-
         int numberTuples = database.NumberTuples();
         RulesWithoutFixedPoint(SCC);
         int numberTuplesAfter = database.NumberTuples();
         int timesLooped = 1;
 
-
-//if it's just one node AND the node loops on itself
-//how to tell if a node loops on itself...
-//
         bool selfLooping = false;
         if(SCC.size() == 1) {
             for(auto index: graph.getGraph()[SCC.at(0)].returnChildren()) {
@@ -118,7 +108,6 @@ public:
                 timesLooped++;
             }
         }
-
 
         cout << timesLooped << " passes: ";
         SCCString(SCC);
@@ -141,7 +130,6 @@ public:
                 bodyRelations.push_back(result);
             }
 
-            //This might not work if there is just one predicate
             if(bodyRelations.size() == 1) {
                 // do nothing
             }
@@ -153,7 +141,7 @@ public:
 
             Relation joinedBody = bodyRelations.at(0);
 
-            // 1. get the strings <- parameter <- head <- rule
+            // 1. get the strings 
             // 2. for each of those strings, loop through the scheme and save the location of the matching as an int in a vector
 
             vector<int> toProject;
@@ -273,21 +261,9 @@ public:
             Parameter parameterToKeep = oldHeaders.at(i);
             string headerToKeep = parameterToKeep.toString();
             newHeaders.push_back(headerToKeep);
-//                newHeaders.push_back(query.getParameters().at(columnsToKeep.at(i)).toString());
         }
 
         result = result.rename(newHeaders);
-
-//        bodyPredicate.toString();
-//        cout << "? ";
-//        if (result.size() == 0) {
-//            cout << "No";
-//        }
-//        else {
-//            cout << "Yes(" << result.size() << ")";
-//        }
-//        cout << endl;
-//        cout << result.toString();
 
         return result;
     }
